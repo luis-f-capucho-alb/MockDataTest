@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "c61601ba-a6fb-47c8-b3b5-12b8dd1a0f7c",
+		"name": "mockData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Eligibility",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var uuid = require('uuid');\r",
+									"var myUUID = uuid.v4();\r",
+									"postman.setEnvironmentVariable(\"myUUID\", myUUID);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sagaId\": \"{{myUUID}}\",\r\n    \"sendResponseEvents\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/eligibility",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"eligibility"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rating",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var uuid = require('uuid');\r",
+									"var myUUID = uuid.v4();\r",
+									"postman.setEnvironmentVariable(\"myUUID\", myUUID);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sagaId\": \"{{myUUID}}\",\r\n    \"sendResponseEvents\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/rating",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buckets",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var uuid = require('uuid');\r",
+									"var myUUID = uuid.v4();\r",
+									"postman.setEnvironmentVariable(\"myUUID\", myUUID);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sagaId\": \"{{myUUID}}\",\r\n    \"sendResponseEvents\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/buckets",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"buckets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Counters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var uuid = require('uuid');\r",
+									"var myUUID = uuid.v4();\r",
+									"postman.setEnvironmentVariable(\"myUUID\", myUUID);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sagaId\": \"{{myUUID}}\",\r\n    \"sendResponseEvents\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/counters",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"counters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ldr",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var uuid = require('uuid');\r",
+									"var myUUID = uuid.v4();\r",
+									"postman.setEnvironmentVariable(\"myUUID\", myUUID);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sagaId\": \"{{myUUID}}\",\r\n    \"sendResponseEvents\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/ldr",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"ldr"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Command",
+			"item": [
+				{
+					"name": "Eligibility",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/command/eligibility/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"command",
+								"eligibility",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rating",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/rating/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"rating",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buckets",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/buckets/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"buckets",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Counters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/counters/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"counters",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ldr",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/test/ldr/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"test",
+								"ldr",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Result",
+			"item": [
+				{
+					"name": "Eligibility",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/result/eligibility/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"result",
+								"eligibility",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rating",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/result/rating/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"result",
+								"rating",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buckets",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/result/buckets/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"result",
+								"buckets",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Counters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/result/counters/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"result",
+								"counters",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ldr",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/mockdata/result/ldr/{{myUUID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mockdata",
+								"result",
+								"ldr",
+								"{{myUUID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

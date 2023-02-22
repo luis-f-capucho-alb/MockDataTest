@@ -1,0 +1,132 @@
+version: '3'
+services:
+  zookeeper:
+    image: docker.io/bitnami/zookeeper:3.8
+    ports:
+      - "2181:2181"
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+  kafka-1:
+    image: docker.io/bitnami/kafka:latest
+    ports:
+      - '9092:9092'
+      - '19092:19092'
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      - KAFKA_LISTENERS=PLAINTEXT://:9092,PLAINTEXT_HOST://:19092
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka-1:9092,PLAINTEXT_HOST://localhost:19092
+      - ALLOW_PLAINTEXT_LISTENER=yes
+  kafka-2:
+    image: docker.io/bitnami/kafka:latest
+    ports:
+      - '9093:9093'
+      - '19093:19093'
+    environment:
+      - KAFKA_BROKER_ID=2
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      - KAFKA_LISTENERS=PLAINTEXT://:9093,PLAINTEXT_HOST://:19093
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka-2:9093,PLAINTEXT_HOST://localhost:19093
+      - ALLOW_PLAINTEXT_LISTENER=yes
+  kafkadrop:
+    image: obsidiandynamics/kafdrop:latest
+    ports:
+      - "9000:9000"
+    depends_on:
+      - kafka-1
+    environment:
+      - KAFKA_BROKERCONNECT=kafka-1:9092,kafka-2:9093
+      - JVM_OPTS=-Xms32M -Xmx64M
+      - SERVER_SERVLET_CONTEXTPATH=/
+  mongodb:
+    image: mongo:4.2
+    container_name: mongodb
+    command: [ "--replSet", "my-replica-set", "--bind_ip_all", "--port", "27017" ]
+    volumes:
+      - ./data/mongodb:/data/db
+    ports:
+      - 27017:27017
+    healthcheck:
+      test: test $$(echo "rs.initiate({_id:'my-replica-set',members:[{_id:0,host:\"mongodb:27017\"},{_id:1,host:\"mongodb2:27018\"}]}).ok || rs.status().ok" | mongo --port 27017 --quiet) -eq 1
+      interval: 10s
+      start_period: 30s
+
+  mongodb2:
+    image: mongo:4.2
+    container_name: mongodb2
+    command: [ "--replSet", "my-replica-set", "--bind_ip_all", "--port", "27018" ]
+    volumes:
+      - ./data/mongodb2:/data/db
+    ports:
+      - 27018:27018
+#  mockdata:
+#    build:
+#      dockerfile: Dockerfile-mockdata
+#    #    image: ghcr.io/alticelabsprojects/exagon-prototype/mockdata:${TAG}
+#    depends_on:
+#      - kafkadrop
+#    ports:
+#      - "8079:8079"
+#    environment:
+#      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka-2:9093,kafka-1:9092
+#  cssorchestrator:
+#    build:
+#      dockerfile: Dockerfile-orchestrator
+#    #    image: ghcr.io/alticelabsprojects/exagon-prototype/cssorchestrator:${TAG}
+#    depends_on:
+#      - kafkadrop
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka-2:9093,kafka-1:9092
+#  eligibility:
+#    build:
+#      dockerfile: Dockerfile-eligibility
+#    #    image: ghcr.io/alticelabsprojects/exagon-prototype/eligibility:${TAG}
+#    depends_on:
+#      - kafkadrop
+#    ports:
+#      - "8081:8081"
+#    environment:
+#      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka-2:9093,kafka-1:9092
+#  rating:
+#    build:
+#      dockerfile: Dockerfile-rating
+#    #    image: ghcr.io/alticelabsprojects/exagon-prototype/rating:${TAG}
+#    depends_on:
+#      - kafkadrop
+#    ports:
+#      - "8082:8082"
+#    environment:
+#      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka-2:9093,kafka-1:9092
+#  charging:
+#    build:
+#      dockerfile: Dockerfile-charging
+#    #    image: ghcr.io/alticelabsprojects/exagon-prototype/charging:${TAG}
+#    depends_on:
+#      - kafkadrop
+#    ports:
+#      - "8083:8083"
+#    environment:
+#      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka-2:9093,kafka-1:9092
+#  counters:
+#    build:
+#      dockerfile: Dockerfile-counters
+#    depends_on:
+#      - kafkadrop
+#    ports:
+#      - "8086:8086"
+#    environment:
+#      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka-2:9093,kafka-1:9092
+#  ldr:
+#    build:
+#      dockerfile: Dockerfile-ldr
+#    #    image: ghcr.io/alticelabsprojects/exagon-prototype/ldr:${TAG}
+#    depends_on:
+#      - kafkadrop
+#    ports:
+#      - "8085:8085"
+#    environment:
+#      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka-2:9093,kafka-1:9092

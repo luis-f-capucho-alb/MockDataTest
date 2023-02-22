@@ -1,0 +1,164 @@
+[
+  {
+    "msisdn": "MARIA_123",
+    "buckets": [
+      {
+        "id": "1",
+        "type": "A",
+        "remainingValue": 10.0
+      },
+      {
+        "id": "2",
+        "type": "B",
+        "remainingValue": 50.0
+      },
+      {
+        "id": "3",
+        "type": "C",
+        "remainingValue": 100.0
+      }
+    ],
+    "counters": [
+      {
+        "id": "1",
+        "type": "A",
+        "value": 1.0
+      },
+      {
+        "id": "2",
+        "type": "B",
+        "value": 10.0
+      },
+      {
+        "id": "3",
+        "type": "C",
+        "value": 100.0
+      },
+      {
+        "id": "4",
+        "type": "D",
+        "value": 166666446
+      }
+    ],
+    "tariffs": [
+      {
+        "id": "1",
+        "name": "Alpha3",
+        "serviceType": "A"
+      },
+      {
+        "id": "2",
+        "name": "Beta1",
+        "serviceType": "B"
+      }
+    ]
+  },
+  {
+    "msisdn": "LEANDRO_456",
+    "buckets": [
+      {
+        "id": "1",
+        "type": "A",
+        "remainingValue": 10.0
+      },
+      {
+        "id": "2",
+        "type": "B",
+        "remainingValue": 50.0
+      },
+      {
+        "id": "3",
+        "type": "C",
+        "remainingValue": 100.0
+      }
+    ],
+    "counters": [
+      {
+        "id": "1",
+        "type": "A",
+        "value": 1000.0
+      },
+      {
+        "id": "2",
+        "type": "B",
+        "value": 10.0
+      },
+      {
+        "id": "3",
+        "type": "C",
+        "value": 100.0
+      },
+      {
+        "id": "4",
+        "type": "D",
+        "value": 166666446
+      }
+    ],
+    "tariffs": [
+      {
+        "id": "1",
+        "name": "Alpha1",
+        "serviceType": "A"
+      },
+      {
+        "id": "2",
+        "name": "Beta1",
+        "serviceType": "B"
+      }
+    ]
+  },
+  {
+    "msisdn": "JOAO_789",
+    "buckets": [
+      {
+        "id": "1",
+        "type": "A",
+        "remainingValue": 1000.0
+      },
+      {
+        "id": "2",
+        "type": "B",
+        "remainingValue": 1000.0
+      },
+      {
+        "id": "3",
+        "type": "C",
+        "remainingValue": 1000.0
+      }
+    ],
+    "counters": [
+      {
+        "id": "1",
+        "type": "A",
+        "value": 10.0
+      },
+      {
+        "id": "2",
+        "type": "B",
+        "value": 10.0
+      },
+      {
+        "id": "3",
+        "type": "C",
+        "value": 10.0
+      },
+      {
+        "id": "4",
+        "type": "D",
+        "value": 166666446
+      }
+    ],
+    "tariffs": [
+      {
+        "id": "1",
+        "name": "Alpha1",
+        "serviceType": "A"
+      },
+      {
+        "id": "2",
+        "name": "Beta1",
+        "serviceType": "B"
+      }
+    ]
+  }
+]
