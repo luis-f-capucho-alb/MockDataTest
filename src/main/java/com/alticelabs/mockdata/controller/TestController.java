@@ -1,6 +1,5 @@
 package com.alticelabs.mockdata.controller;
 
-import com.alticelabs.common.models.CommandCreateAccount;
 import com.alticelabs.mockdata.models.PostRequest;
 import com.alticelabs.mockdata.services.TestService;
 import com.alticelabs.prototype_common_models.buckets.BucketResult;
