@@ -1,0 +1,47 @@
+[
+  {
+    "id": "bucket1",
+    "type": "A",
+    "remainingValue": 10.0
+  },
+  {
+    "id": "bucket2",
+    "type": "B",
+    "remainingValue": 50.0
+  },
+  {
+    "id": "bucket3",
+    "type": "C",
+    "remainingValue": 100.0
+  },
+  {
+    "id": "bucket11",
+    "type": "A",
+    "remainingValue": 20.0
+  },
+  {
+    "id": "bucket21",
+    "type": "B",
+    "remainingValue": 30.0
+  },
+  {
+    "id": "bucket31",
+    "type": "C",
+    "remainingValue": 10.0
+  },
+  {
+    "id": "bucket12",
+    "type": "A",
+    "remainingValue": 110.0
+  },
+  {
+    "id": "bucket22",
+    "type": "B",
+    "remainingValue": 150.0
+  },
+  {
+    "id": "bucket32",
+    "type": "C",
+    "remainingValue": 200.0
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "counter1",
+    "type": "A",
+    "value": 10.0
+  },
+  {
+    "id": "counter2",
+    "type": "B",
+    "value": 50.0
+  },
+  {
+    "id": "counter3",
+    "type": "C",
+    "value": 100.0
+  },
+  {
+    "id": "counter4",
+    "type": "D",
+    "value": 100.0
+  },
+  {
+    "id": "counter11",
+    "type": "A",
+    "value": 10.0
+  },
+  {
+    "id": "counter21",
+    "type": "B",
+    "value": 50.0
+  },
+  {
+    "id": "counter31",
+    "type": "C",
+    "value": 100.0
+  },
+  {
+    "id": "counter41",
+    "type": "D",
+    "value": 100.0
+  },
+  {
+    "id": "counter12",
+    "type": "A",
+    "value": 10.0
+  },
+  {
+    "id": "counter22",
+    "type": "B",
+    "value": 50.0
+  },
+  {
+    "id": "counter32",
+    "type": "C",
+    "value": 100.0
+  },
+  {
+    "id": "counter42",
+    "type": "D",
+    "value": 100.0
+  }
+]

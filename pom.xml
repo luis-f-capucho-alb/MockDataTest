@@ -6,29 +6,48 @@
 
     <groupId>com.alticelabs</groupId>
     <artifactId>MockData</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>exagon-communication-lib</name>
+            <url>https://maven.pkg.github.com/AlticeLabsProjects/cpp/exagon-communication-lib</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>github</id>
+            <name>exagon-kafka-lib</name>
+            <url>https://maven.pkg.github.com/AlticeLabsProjects/cpp/exagon-kafka-lib</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!-- ALTICELABS -->
         <dependency>
             <groupId>com.alticelabs</groupId>
             <artifactId>prototype-common-models</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>2.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.alticelabs</groupId>
+            <groupId>com.alticelabs.ccp</groupId>
             <artifactId>exagon-communication-lib</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.2.0</version>
         </dependency>
         <dependency>
-            <groupId>com.alticelabs</groupId>
+            <groupId>com.alticelabs.ccp</groupId>
             <artifactId>exagon-kafka-lib</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.2.0</version>
         </dependency>
 
         <!-- SPRING -->

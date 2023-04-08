@@ -3,161 +3,83 @@
     "msisdn": "MARIA_123",
     "buckets": [
       {
-        "id": "1",
-        "type": "A",
-        "remainingValue": 10.0
+        "id": "bucket1"
       },
       {
-        "id": "2",
-        "type": "B",
-        "remainingValue": 50.0
+        "id": "bucket2"
       },
       {
-        "id": "3",
-        "type": "C",
-        "remainingValue": 100.0
+        "id": "bucket3"
       }
     ],
     "counters": [
       {
-        "id": "1",
-        "type": "A",
-        "value": 1.0
+        "id": "counter1"
       },
       {
-        "id": "2",
-        "type": "B",
-        "value": 10.0
+        "id": "counter2"
       },
       {
-        "id": "3",
-        "type": "C",
-        "value": 100.0
+        "id": "counter3"
       },
       {
-        "id": "4",
-        "type": "D",
-        "value": 166666446
-      }
-    ],
-    "tariffs": [
-      {
-        "id": "1",
-        "name": "Alpha3",
-        "serviceType": "A"
-      },
-      {
-        "id": "2",
-        "name": "Beta1",
-        "serviceType": "B"
+        "id": "counter4"
       }
     ]
   },
   {
-    "msisdn": "LEANDRO_456",
+    "msisdn": "LUIS_456",
     "buckets": [
       {
-        "id": "1",
-        "type": "A",
-        "remainingValue": 10.0
+        "id": "bucket11"
       },
       {
-        "id": "2",
-        "type": "B",
-        "remainingValue": 50.0
+        "id": "bucket21"
       },
       {
-        "id": "3",
-        "type": "C",
-        "remainingValue": 100.0
+        "id": "bucket31"
       }
     ],
     "counters": [
       {
-        "id": "1",
-        "type": "A",
-        "value": 1000.0
+        "id": "counter11"
       },
       {
-        "id": "2",
-        "type": "B",
-        "value": 10.0
+        "id": "counter21"
       },
       {
-        "id": "3",
-        "type": "C",
-        "value": 100.0
+        "id": "counter31"
       },
       {
-        "id": "4",
-        "type": "D",
-        "value": 166666446
-      }
-    ],
-    "tariffs": [
-      {
-        "id": "1",
-        "name": "Alpha1",
-        "serviceType": "A"
-      },
-      {
-        "id": "2",
-        "name": "Beta1",
-        "serviceType": "B"
+        "id": "counter4"
       }
     ]
   },
   {
-    "msisdn": "JOAO_789",
+    "msisdn": "PEDRO_789",
     "buckets": [
       {
-        "id": "1",
-        "type": "A",
-        "remainingValue": 1000.0
+        "id": "bucket12"
       },
       {
-        "id": "2",
-        "type": "B",
-        "remainingValue": 1000.0
+        "id": "bucket22"
       },
       {
-        "id": "3",
-        "type": "C",
-        "remainingValue": 1000.0
+        "id": "bucket32"
       }
     ],
     "counters": [
       {
-        "id": "1",
-        "type": "A",
-        "value": 10.0
+        "id": "counter12"
       },
       {
-        "id": "2",
-        "type": "B",
-        "value": 10.0
+        "id": "counter22"
       },
       {
-        "id": "3",
-        "type": "C",
-        "value": 10.0
+        "id": "counter32"
       },
       {
-        "id": "4",
-        "type": "D",
-        "value": 166666446
-      }
-    ],
-    "tariffs": [
-      {
-        "id": "1",
-        "name": "Alpha1",
-        "serviceType": "A"
-      },
-      {
-        "id": "2",
-        "name": "Beta1",
-        "serviceType": "B"
+        "id": "counter42"
       }
     ]
   }

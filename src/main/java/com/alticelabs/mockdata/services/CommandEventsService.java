@@ -1,5 +1,8 @@
 package com.alticelabs.mockdata.services;
 
+import com.alticelabs.ccp.exagon_common_models.repository.ExagonEntity;
+import com.alticelabs.ccp.exagon_common_models.repository.ExagonEntityEvent;
+import com.alticelabs.ccp.exagon_communication_lib.exceptions.ExagonCommunicationLibException;
 import com.alticelabs.exagon_communication_lib.consumer.IConsumer;
 import com.alticelabs.exagon_communication_lib.exceptions.ExagonCommunicationLibException;
 import com.alticelabs.exagon_communication_lib.models.Event;
@@ -14,6 +17,7 @@ import com.alticelabs.prototype_common_models.eligibility.EligibilityResult;
 import com.alticelabs.prototype_common_models.ldr.LdrResult;
 import com.alticelabs.prototype_common_models.rating.RatingResult;
 import com.alticelabs.prototype_common_models.utils.TOPICS;
+import org.apache.kafka.common.message.FetchSnapshotRequestData;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -39,7 +43,7 @@ public class CommandEventsService {
         completableFutureMap.put(UServices.LDR, new HashMap<>());
 
         Map<String, Class<?>> topicsPerClass = new HashMap<>();
-        topicsPerClass.put(TOPICS.ELIGIBILITIES, EligibilityResult.class);
+        topicsPerClass.put(FetchSnapshotRequestData.TopicSnapshot..ELIGIBILITIES, EligibilityResult.class);
         topicsPerClass.put(TOPICS.RATINGS, RatingResult.class);
         topicsPerClass.put(TOPICS.BUCKETSRESULT, BucketResult.class);
         topicsPerClass.put(TOPICS.COUNTERSRESULT, CounterResult.class);
@@ -53,7 +57,7 @@ public class CommandEventsService {
             completableFutureMap.get(uService).put(sagaId, completableFuture);
         }
 
-        Event event = ExagonCommandEventFactory.getExagonCommand(uService, sagaId);
+        ExagonEntityEvent event = ExagonCommandEventFactory.getExagonCommand(uService, sagaId);
         try {
             producer.produce(event);
         } catch (ExagonCommunicationLibException e) {

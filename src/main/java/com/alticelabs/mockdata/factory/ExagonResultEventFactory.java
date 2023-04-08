@@ -10,9 +10,10 @@ import com.alticelabs.prototype_common_models.counters.CountersChange;
 import com.alticelabs.prototype_common_models.eligibility.EligibilityResult;
 import com.alticelabs.prototype_common_models.eligibility.EligibilityStatus;
 import com.alticelabs.prototype_common_models.ldr.LdrResult;
-import com.alticelabs.prototype_common_models.orchestrator.CoreRequest;
+import com.alticelabs.prototype_common_models.orchestrator.PrototypeRequest;
 import com.alticelabs.prototype_common_models.orchestrator.Request;
 import com.alticelabs.prototype_common_models.orchestrator.ServiceType;
+import com.alticelabs.prototype_common_models.protocol_mapper.PrototypeRequest;
 import com.alticelabs.prototype_common_models.rating.RatingResult;
 import com.alticelabs.prototype_common_models.tariffs.TariffName;
 import com.alticelabs.prototype_common_models.utils.Operation;
@@ -45,9 +46,9 @@ public class ExagonResultEventFactory {
     }
 
     private static Event getEntryServiceResultEvent(String sagaId) {
-        CoreRequest coreRequest = new CoreRequest(sagaId, "MARIA_123", new Timestamp(new Date().getTime()), false, 10d, ServiceType.A);
+        PrototypeRequest prototypeRequest = new PrototypeRequest(sagaId, "MARIA_123", new Timestamp(new Date().getTime()), false, 10d, BucketType.A);
         Request request = new Request();
-        request.buildRequest(coreRequest);
+        request.buildRequest(prototypeRequest);
         request.setRuleID("1");
 
         return new Event(sagaId, TOPICS.REQUESTS, request);
